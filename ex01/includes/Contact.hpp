@@ -6,7 +6,7 @@
 /*   By: ldesboui <ldesboui@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 14:03:12 by ldesboui          #+#    #+#             */
-/*   Updated: 2026/01/20 14:27:59 by ldesboui         ###   ########.fr       */
+/*   Updated: 2026/01/20 16:57:50 by ldesboui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,13 @@
 class Contact
 {
 private:
-	string first_name;
-	string last_name;
-	string nickname;
-	string phone_number;
-	string secret;
+	int		number;
+	string	first_name;
+	string	last_name;
+	string	nickname;
+	string	phone_number;
+	string	secret;
+	static int lastnumber;
 public:
 	Contact(string fn, string ln, string nn, string pn, string s);
 	Contact();
@@ -34,6 +36,5 @@ public:
 	void set_nn (string nn);
 	void set_pn (string pn);
 	void set_s (string s);
-
 };
 #endif

@@ -6,7 +6,7 @@
 /*   By: ldesboui <ldesboui@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 13:16:56 by ldesboui          #+#    #+#             */
-/*   Updated: 2026/01/20 15:10:51 by ldesboui         ###   ########.fr       */
+/*   Updated: 2026/01/20 17:20:46 by ldesboui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/includes.hpp"
@@ -40,13 +40,13 @@ int	main(void)
 			getline(cin, s);
 			aPhoneBook.addcontact(fn, ln, nn, pn, s);
 		}
-		if (line.compare("EXIT"))
+		else if (line.compare("EXIT") == 0)
 		{
 			return (0);
 		}
-		if (line.compare("SEARCH"))
+		else if (line.compare("SEARCH") == 0)
 		{
-
+			aPhoneBook.print_contacts();
 		}
 	}
 	return (0);

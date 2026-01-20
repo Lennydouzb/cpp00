@@ -6,29 +6,23 @@
 /*   By: ldesboui <ldesboui@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 13:37:11 by ldesboui          #+#    #+#             */
-/*   Updated: 2026/01/20 15:04:10 by ldesboui         ###   ########.fr       */
+/*   Updated: 2026/01/20 17:18:01 by ldesboui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/includes.hpp"
 
+int Contact::lastnumber = 0;
 Contact::Contact()
 {
+	Contact::lastnumber += 1;
+	this->number = Contact::lastnumber;
 	this->first_name = "";
 	this->last_name = "";
 	this->nickname = "";
 	this->phone_number = "";
 	this->secret = "";
 }
-Contact::Contact(string fn, string ln, string nn, string pn, string s)
-{
-	this->first_name = fn;
-	this->last_name = ln;
-	this->nickname = nn;
-	this->phone_number = pn;
-	this->secret = s;
-}
-
 string Contact::get_fn ()const
 {
 	return (this->first_name);
@@ -69,3 +63,4 @@ void Contact::set_s (string s)
 {
 	this->secret = s;
 }
+
