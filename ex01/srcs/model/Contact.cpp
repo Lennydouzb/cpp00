@@ -6,7 +6,7 @@
 /*   By: ldesboui <ldesboui@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 13:37:11 by ldesboui          #+#    #+#             */
-/*   Updated: 2026/01/20 17:18:01 by ldesboui         ###   ########.fr       */
+/*   Updated: 2026/01/21 14:56:13 by ldesboui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,4 +63,3 @@ void Contact::set_s (string s)
 {
 	this->secret = s;
 }
-

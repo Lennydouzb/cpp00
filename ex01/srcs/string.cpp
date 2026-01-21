@@ -1,24 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   includes.hpp                                       :+:      :+:    :+:   */
+/*   string.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldesboui <ldesboui@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/20 13:32:02 by ldesboui          #+#    #+#             */
-/*   Updated: 2026/01/21 14:51:27 by ldesboui         ###   ########.fr       */
+/*   Created: 2026/01/21 13:43:54 by ldesboui          #+#    #+#             */
+/*   Updated: 2026/01/21 14:50:15 by ldesboui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "../includes/includes.hpp"
 
-#ifndef INCLUDES_HPP
-# define INCLUDES_HPP
-# include <iostream>
-# include <string>
-# include <limits>
-# include <cstdlib>
-using namespace std;
-# include "Contact.hpp"
-# include "PhoneBook.hpp"
-string	truncate(string s);
-int		is_numeric(string s);
-#endif
+string	truncate(string s)
+{
+	if (s.length() > 10)
+	{
+		return s.substr(0, 9) + '.';
+	}
+	else if (s.length() == 10)
+		return s;
+	else
+	{
+		while (s.length() < 10)
+		{
+			s = ' ' + s;
+		}
+	}
+	return s;
+}
+
+int	is_numeric(string s)
+{
+	int	i = 0;
+	while (s[i])
+	{
+		if (!isdigit(static_cast<unsigned char>(s[0])))
+			return (0);
+		++i;
+	}
+	return (1);
+}

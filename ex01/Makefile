@@ -4,7 +4,8 @@ NAME = phonebook
 SRC_DIR = srcs/
 SRCS = $(SRC_DIR)main.cpp \
 	   $(SRC_DIR)model/Contact.cpp \
-	   $(SRC_DIR)model/PhoneBook.cpp
+	   $(SRC_DIR)model/PhoneBook.cpp \
+	   $(SRC_DIR)string.cpp
 
 OBJ_DIR = .build/
 OBJS = $(SRCS:$(SRC_DIR)%.cpp=$(OBJ_DIR)%.o)
