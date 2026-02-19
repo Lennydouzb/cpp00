@@ -6,7 +6,7 @@
 /*   By: ldesboui <ldesboui@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 13:32:02 by ldesboui          #+#    #+#             */
-/*   Updated: 2026/01/21 14:51:27 by ldesboui         ###   ########.fr       */
+/*   Updated: 2026/02/19 11:56:01 by ldesboui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,10 @@
 # define INCLUDES_HPP
 # include <iostream>
 # include <string>
+# include <sstream>
 # include <limits>
+# include <algorithm>
+# include <cctype>
 # include <cstdlib>
 using namespace std;
 # include "Contact.hpp"

@@ -6,10 +6,11 @@
 /*   By: ldesboui <ldesboui@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 13:16:56 by ldesboui          #+#    #+#             */
-/*   Updated: 2026/01/21 16:19:46 by ldesboui         ###   ########.fr       */
+/*   Updated: 2026/02/19 11:57:58 by ldesboui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/includes.hpp"
+#include <cctype>
 #include <cstring>
 
 int	main(void)
@@ -42,6 +43,8 @@ int	main(void)
 			{
 				cout << "Phone Number:";
 				getline(cin, pn);
+				if (pn.find_first_not_of("0123456789") != string::npos)
+					pn = "";
 			}
 			while (nn.empty() == 1)
 			{

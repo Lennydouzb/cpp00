@@ -6,7 +6,7 @@
 /*   By: ldesboui <ldesboui@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 13:16:56 by ldesboui          #+#    #+#             */
-/*   Updated: 2026/01/20 13:28:01 by ldesboui         ###   ########.fr       */
+/*   Updated: 2026/02/19 10:59:47 by ldesboui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	main(int ac, char **av)
 
 	if (ac < 2)
 	{
-		cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
+		cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *\n";
 		return (0);
 	}
 	else
