@@ -6,7 +6,7 @@
 /*   By: ldesboui <ldesboui@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 13:37:11 by ldesboui          #+#    #+#             */
-/*   Updated: 2026/01/21 14:56:13 by ldesboui         ###   ########.fr       */
+/*   Updated: 2026/02/26 18:07:34 by ldesboui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,43 +23,43 @@ Contact::Contact()
 	this->phone_number = "";
 	this->secret = "";
 }
-string Contact::get_fn ()const
+std::string Contact::get_fn ()const
 {
 	return (this->first_name);
 }
-string Contact::get_ln ()const
+std::string Contact::get_ln ()const
 {
 	return (this->last_name);
 }
-string Contact::get_nn ()const
+std::string Contact::get_nn ()const
 {
 	return (this->nickname);
 }
-string Contact::get_pn ()const
+std::string Contact::get_pn ()const
 {
 	return (this->phone_number);
 }
-string Contact::get_s ()const
+std::string Contact::get_s ()const
 {
 	return (this->secret);
 }
-void Contact::set_fn (string fn)
+void Contact::set_fn (std::string fn)
 {
 	this->first_name = fn;
 }
-void Contact::set_ln (string ln)
+void Contact::set_ln (std::string ln)
 {
 	this->last_name =ln;
 }
-void Contact::set_nn (string nn)
+void Contact::set_nn (std::string nn)
 {
 	this->nickname = nn;
 }
-void Contact::set_pn (string pn)
+void Contact::set_pn (std::string pn)
 {
 	this->phone_number = pn;
 }
-void Contact::set_s (string s)
+void Contact::set_s (std::string s)
 {
 	this->secret = s;
 }

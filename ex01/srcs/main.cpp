@@ -6,55 +6,65 @@
 /*   By: ldesboui <ldesboui@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 13:16:56 by ldesboui          #+#    #+#             */
-/*   Updated: 2026/02/19 11:57:58 by ldesboui         ###   ########.fr       */
+/*   Updated: 2026/02/26 18:06:58 by ldesboui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/includes.hpp"
 #include <cctype>
-#include <cstring>
+
+void	clear_all(std::string &fn, std::string &ln, std::string &pn, std::string &s, std::string &nn, std::string &line)
+{
+	fn.clear();
+	ln.clear();
+	pn.clear();
+	s.clear();
+	nn.clear();
+	line.clear();
+}
 
 int	main(void)
 {
 	PhoneBook	aPhoneBook;
-	string		line;
-	int			ok = 1;
-	string		fn;
-	string		ln;
-	string		pn;
-	string		s;
-	string		nn;
+	std::string		line = "";
+	int				ok = 1;
+	std::string		fn = "";
+	std::string		ln = "";
+	std::string		pn = "";
+	std::string		s = "";
+	std::string		nn = "";
 	while (ok == 1)
 	{
-		cout << "Type a command:";
-		getline(cin, line);
+		clear_all(fn, ln, pn, s, nn, line);
+		std::cout << "Type a command:";
+		getline(std::cin, line);
 		if (line.compare("ADD") == 0)
 		{
 			while (fn.empty() == 1)
 			{
-				cout << "First Name:";
-				getline(cin, fn);
+				std::cout << "First Name:";
+				getline(std::cin, fn);
 			}
 			while (ln.empty() == 1)
 			{
-				cout << "Last Name:";
-				getline(cin, ln);
+				std::cout << "Last Name:";
+				getline(std::cin, ln);
 			}
 			while (pn.empty() == 1)
 			{
-				cout << "Phone Number:";
-				getline(cin, pn);
-				if (pn.find_first_not_of("0123456789") != string::npos)
+				std::cout << "Phone Number:";
+				getline(std::cin, pn);
+				if (pn.find_first_not_of("0123456789") != std::string::npos)
 					pn = "";
 			}
 			while (nn.empty() == 1)
 			{
-				cout << "Nickname:";
-				getline(cin, nn);
+				std::cout << "Nickname:";
+				getline(std::cin, nn);
 			}
 			while (s.empty() == 1)
 			{
-				cout << "Darkest secret:";
-				getline(cin, s);
+				std::cout << "Darkest secret:";
+				getline(std::cin, s);
 			}
 			aPhoneBook.addcontact(fn, ln, nn, pn, s);
 		}
@@ -65,23 +75,28 @@ int	main(void)
 		else if (line.compare("SEARCH") == 0)
 		{
 			aPhoneBook.print_contacts();
-			cout << "Index to detail: ";
-			getline(cin, line);
+			std::cout << "Index to detail: ";
+			getline(std::cin, line);
+			while (line.empty() == 1)
+			{
+				std::cout << "Index to detail: ";
+				getline(std::cin, line);
+			}
 			if (is_numeric(line) == 1)
 			{
 				if (atoi(line.c_str()) < aPhoneBook.get_nb_contact()  || atoi(line.c_str()) < 0)
 				{
-					cout << "     index|first name| last name|  nickname|phone Nber|    secret\n";
+					std::cout << "     index|first name| last name|  nickname|phone Nber|    secret\n";
 					aPhoneBook.print_contact_detailed(std::atoi(line.c_str()));
 				}
 				else
 				{
-					cout << "Not in index\n";
+					std::cout << "Not in index\n";
 				}
 			}
 			else
 			{
-				cout << "Not numeric\n";
+				std::cout << "Not numeric\n";
 
 			}
 		}

@@ -6,7 +6,7 @@
 /*   By: ldesboui <ldesboui@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 14:03:12 by ldesboui          #+#    #+#             */
-/*   Updated: 2026/01/21 13:41:07 by ldesboui         ###   ########.fr       */
+/*   Updated: 2026/02/26 15:19:28 by ldesboui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,25 +16,25 @@
 class Contact
 {
 private:
-	int		number;
-	string	first_name;
-	string	last_name;
-	string	nickname;
-	string	phone_number;
-	string	secret;
-	static int lastnumber;
+	int			number;
+	std::string	first_name;
+	std::string	last_name;
+	std::string	nickname;
+	std::string	phone_number;
+	std::string	secret;
+	static int	lastnumber;
 public:
-	Contact(string fn, string ln, string nn, string pn, string s);
+	Contact(std::string fn, std::string ln, std::string nn, std::string pn, std::string s);
 	Contact();
-	string get_fn	()const;
-	string get_ln	()const;
-	string get_nn	()const;
-	string get_pn	()const;
-	string get_s	()const;
-	void set_fn (string fn);
-	void set_ln (string ln);
-	void set_nn (string nn);
-	void set_pn (string pn);
-	void set_s (string s);
+	std::string get_fn	()const;
+	std::string get_ln	()const;
+	std::string get_nn	()const;
+	std::string get_pn	()const;
+	std::string get_s	()const;
+	void set_fn (std::string fn);
+	void set_ln (std::string ln);
+	void set_nn (std::string nn);
+	void set_pn (std::string pn);
+	void set_s (std::string s);
 };
 #endif

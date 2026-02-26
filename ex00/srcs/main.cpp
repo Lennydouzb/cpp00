@@ -6,37 +6,36 @@
 /*   By: ldesboui <ldesboui@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 13:16:56 by ldesboui          #+#    #+#             */
-/*   Updated: 2026/02/19 10:59:47 by ldesboui         ###   ########.fr       */
+/*   Updated: 2026/02/26 17:43:44 by ldesboui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-using namespace std;
+#include <algorithm>
+#include <string>
+#include <cctype>
 
 int	main(int ac, char **av)
 {
-	int	i;
-	int	k;
+	std::string str_av;
+	int			i;
 
 	if (ac < 2)
 	{
-		cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *\n";
+		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *\n";
 		return (0);
 	}
 	else
 	{
 		i = 1;
-		while (av[i])
+		while (i < ac)
 		{
-			k = 0;
-			while (av[i][k])
-			{
-				cout << static_cast<char>(toupper(av[i][k]));
-				++k;
-			}
+			str_av = av[i];
+			std::transform(str_av.begin(), str_av.end(), str_av.begin(), ::toupper);
+			std::cout << str_av;
 			++i;
 		}
-		cout << '\n';
+		std::cout << std::endl;
 	}
 	return (0);
 }

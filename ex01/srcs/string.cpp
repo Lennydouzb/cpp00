@@ -6,12 +6,12 @@
 /*   By: ldesboui <ldesboui@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 13:43:54 by ldesboui          #+#    #+#             */
-/*   Updated: 2026/01/21 14:50:15 by ldesboui         ###   ########.fr       */
+/*   Updated: 2026/02/26 16:34:52 by ldesboui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/includes.hpp"
 
-string	truncate(string s)
+std::string	truncate(std::string s)
 {
 	if (s.length() > 10)
 	{
@@ -29,7 +29,7 @@ string	truncate(string s)
 	return s;
 }
 
-int	is_numeric(string s)
+int	is_numeric(std::string s)
 {
 	int	i = 0;
 	while (s[i])
